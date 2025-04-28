@@ -14,4 +14,6 @@ the configFiles all under the path:
 ./aiStream/gtyStream/configFiles/...
 ```
 the video using Ethernet local video loop streaming, for example:
-![img.png](img.png)
+```
+ffmpeg -re -stream_loop -1 -i 6long.mp4 -c copy -f rtsp rtsp://127.0.0.1:8554/stream4
+```
