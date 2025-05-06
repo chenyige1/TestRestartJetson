@@ -209,13 +209,18 @@ def main(eventQ=None):
     encoderRecord.set_property('insert-sps-pps', 1)
     encoderRecord.set_property("insert-vui",1)
 
-    #-----设置nvvideoconvert-------
-    nvvidconv.set_property('compute-hw',1)
-    nvvidconv_postosd.set_property('compute-hw',1)
-    nvvidconv1.set_property('compute-hw',1)
-    # nvvidconv.set_property('nvbuf-memory-type',3)
-    # nvvidconv_postosd.set_property('nvbuf-memory-type',3)
-    # nvvidconv1.set_property('nvbuf-memory-type',3)
+    # ============设置属性调试super start================
+    streammux.set_property('nvbuf-memory-type', 4)
+    tracker.set_property('compute-hw', 1)
+    # -----设置nvvideoconvert-------
+    nvvidconv.set_property('compute-hw', 1)
+    nvvidconv_postosd.set_property('compute-hw', 1)
+    nvvidconv1.set_property('compute-hw', 1)
+    nvvidconv.set_property('nvbuf-memory-type', 4)
+    nvvidconv_postosd.set_property('nvbuf-memory-type', 4)
+    nvvidconv1.set_property('nvbuf-memory-type', 4)
+
+    # ============设置属性调试super end==================
 
 
 
