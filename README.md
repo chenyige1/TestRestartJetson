@@ -18,3 +18,9 @@ the video using Ethernet local video loop streaming, for example:
 ffmpeg -re -stream_loop -1 -i 6long.mp4 -c copy -f rtsp rtsp://127.0.0.1:8554/stream4
 ```
 the local marathon video is so big (400+MB) that cannot upload, so you can find a runner video with bib digital, and config bib info in ./aiStream/config.ini file
+ 
+replace the pyds.so in your path:
+```
+python3.10/site-packages/pyds.so
+```
+if you have any other question, please feel free to connect me with 572161771@qq.com
